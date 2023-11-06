@@ -1,0 +1,44 @@
+Args in experiment:
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=64, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, head_dropout=0.0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='MyformerV2', model_id='96_336', moving_avg=25, multi_moving_avg=[13, 17, 21, 25, 29, 31], n_heads=4, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patch_len=16, patience=3, pred_len=336, root_path='./dataset/exchange_rate/', seasonal_patterns='Monthly', seq_len=96, show_model=False, stride=8, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_96_336_MyformerV2_custom_ftM_sl96_ll48_pl336_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 425
+test 1182
+Epoch: 1 cost time: 20.973691701889038
+Epoch: 1, Steps: 76 | Train Loss: 0.4481416 Vali Loss: 0.4137194 Test Loss: 0.3206868
+Validation loss decreased (inf --> 0.413719).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 18.59311008453369
+Epoch: 2, Steps: 76 | Train Loss: 0.4333969 Vali Loss: 0.4172807 Test Loss: 0.3367868
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 18.241219997406006
+Epoch: 3, Steps: 76 | Train Loss: 0.4225695 Vali Loss: 0.4149098 Test Loss: 0.3363878
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 18.448840856552124
+Epoch: 4, Steps: 76 | Train Loss: 0.4185039 Vali Loss: 0.3918948 Test Loss: 0.3356111
+Validation loss decreased (0.413719 --> 0.391895).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 18.650816679000854
+Epoch: 5, Steps: 76 | Train Loss: 0.4150509 Vali Loss: 0.3850222 Test Loss: 0.3578861
+Validation loss decreased (0.391895 --> 0.385022).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 18.48979640007019
+Epoch: 6, Steps: 76 | Train Loss: 0.4130917 Vali Loss: 0.3954111 Test Loss: 0.3413065
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 18.44319438934326
+Epoch: 7, Steps: 76 | Train Loss: 0.4127001 Vali Loss: 0.3900689 Test Loss: 0.3457324
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 18.334219455718994
+Epoch: 8, Steps: 76 | Train Loss: 0.4122390 Vali Loss: 0.3920282 Test Loss: 0.3459256
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_96_336_MyformerV2_custom_ftM_sl96_ll48_pl336_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+test shape: (1182, 1, 336, 8) (1182, 1, 336, 8)
+test shape: (1182, 336, 8) (1182, 336, 8)
+mse:0.35788607597351074, mae:0.4317949712276459

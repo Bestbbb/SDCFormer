@@ -1,0 +1,47 @@
+Args in experiment:
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=64, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=7, factor=3, features='M', freq='h', gpu=0, head_dropout=0.0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='MyformerV2', model_id='96_720', moving_avg=25, multi_moving_avg=[13, 17, 21, 25, 29, 31], n_heads=4, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patch_len=16, patience=3, pred_len=720, root_path='./dataset/ETT-small/', seasonal_patterns='Monthly', seq_len=96, show_model=False, stride=8, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_96_720_MyformerV2_custom_ftM_sl96_ll48_pl720_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 47961
+val 6249
+test 13217
+	iters: 100, epoch: 1 | loss: 0.5619654
+	speed: 1.4780s/iter; left time: 10923.8014s
+	iters: 200, epoch: 1 | loss: 0.5380306
+	speed: 1.4668s/iter; left time: 10694.6039s
+	iters: 300, epoch: 1 | loss: 0.5267989
+	speed: 1.2532s/iter; left time: 9012.0746s
+	iters: 400, epoch: 1 | loss: 0.6031519
+	speed: 1.0151s/iter; left time: 7197.9293s
+	iters: 500, epoch: 1 | loss: 0.5593661
+	speed: 1.1876s/iter; left time: 8302.7729s
+	iters: 600, epoch: 1 | loss: 0.4354796
+	speed: 1.4664s/iter; left time: 10105.2338s
+	iters: 700, epoch: 1 | loss: 0.4599586
+	speed: 1.4665s/iter; left time: 9959.0276s
+Epoch: 1 cost time: 1005.7136268615723
+Epoch: 1, Steps: 749 | Train Loss: 0.5443986 Vali Loss: 0.4072566 Test Loss: 0.5683246
+Validation loss decreased (inf --> 0.407257).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4845400
+	speed: 4.4089s/iter; left time: 29283.6737s
+	iters: 200, epoch: 2 | loss: 0.4498267
+	speed: 1.0121s/iter; left time: 6621.4727s
+	iters: 300, epoch: 2 | loss: 0.5105634
+	speed: 1.2826s/iter; left time: 8262.3871s
+	iters: 400, epoch: 2 | loss: 0.4650414
+	speed: 1.4665s/iter; left time: 9300.7377s
+	iters: 500, epoch: 2 | loss: 0.4620057
+	speed: 1.4673s/iter; left time: 9159.0731s
+	iters: 600, epoch: 2 | loss: 0.5429645
+	speed: 1.4665s/iter; left time: 9007.2653s
+	iters: 700, epoch: 2 | loss: 0.5093918
+	speed: 1.4655s/iter; left time: 8854.2662s
+Epoch: 2 cost time: 1005.7128784656525
+Epoch: 2, Steps: 749 | Train Loss: 0.5194615 Vali Loss: 0.3854485 Test Loss: 0.5595898
+Validation loss decreased (0.407257 --> 0.385448).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.5133073
+	speed: 3.4684s/iter; left time: 20439.5239s
+	iters: 200, epoch: 3 | loss: 0.5415174
+	speed: 0.9437s/iter; left time: 5466.6117s

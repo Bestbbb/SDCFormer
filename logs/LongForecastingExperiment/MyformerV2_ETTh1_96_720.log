@@ -1,0 +1,32 @@
+Args in experiment:
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=128, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=7, factor=3, features='M', freq='h', gpu=0, head_dropout=0.0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='MyformerV2', model_id='96_720', moving_avg=25, multi_moving_avg=[13, 17, 21, 25, 29, 31], n_heads=4, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patch_len=16, patience=3, pred_len=720, root_path='./dataset/ETT-small/', seasonal_patterns='Monthly', seq_len=96, show_model=False, stride=8, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_96_720_MyformerV2_custom_ftM_sl96_ll48_pl720_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11379
+val 1023
+test 2765
+Epoch: 1 cost time: 107.80843138694763
+Epoch: 1, Steps: 88 | Train Loss: 0.7806123 Vali Loss: 0.4109567 Test Loss: 0.7582390
+Validation loss decreased (inf --> 0.410957).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 106.91484236717224
+Epoch: 2, Steps: 88 | Train Loss: 0.7538092 Vali Loss: 0.4092887 Test Loss: 0.7077876
+Validation loss decreased (0.410957 --> 0.409289).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 107.16504049301147
+Epoch: 3, Steps: 88 | Train Loss: 0.7390805 Vali Loss: 0.4106115 Test Loss: 0.7017872
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 107.28732943534851
+Epoch: 4, Steps: 88 | Train Loss: 0.7320832 Vali Loss: 0.4213931 Test Loss: 0.7036315
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 107.4789252281189
+Epoch: 5, Steps: 88 | Train Loss: 0.7298096 Vali Loss: 0.4254050 Test Loss: 0.7050253
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_96_720_MyformerV2_custom_ftM_sl96_ll48_pl720_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2765
+test shape: (2765, 1, 720, 7) (2765, 1, 720, 7)
+test shape: (2765, 720, 7) (2765, 720, 7)
+mse:0.7077882289886475, mae:0.6168719530105591

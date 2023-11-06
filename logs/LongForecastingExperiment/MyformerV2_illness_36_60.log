@@ -1,0 +1,52 @@
+Args in experiment:
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=64, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=7, factor=3, features='M', freq='h', gpu=0, head_dropout=0.0, is_training=1, itr=1, label_len=18, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='MyformerV2', model_id='36_60', moving_avg=25, multi_moving_avg=[13, 17, 21, 25, 29, 31], n_heads=4, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patch_len=16, patience=3, pred_len=60, root_path='./dataset/illness/', seasonal_patterns='Monthly', seq_len=36, show_model=False, stride=8, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_36_60_MyformerV2_custom_ftM_sl36_ll18_pl60_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 581
+val 38
+test 134
+Epoch: 1 cost time: 4.882660388946533
+Epoch: 1, Steps: 9 | Train Loss: 0.9028465 Vali Loss: nan Test Loss: 2.6581619
+Validation loss decreased (inf --> nan).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 2.239109992980957
+Epoch: 2, Steps: 9 | Train Loss: 0.7707320 Vali Loss: nan Test Loss: 2.6677566
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 2.217824697494507
+Epoch: 3, Steps: 9 | Train Loss: 0.7113504 Vali Loss: nan Test Loss: 2.5105309
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 2.2904326915740967
+Epoch: 4, Steps: 9 | Train Loss: 0.7061983 Vali Loss: nan Test Loss: 2.4501395
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 2.0577750205993652
+Epoch: 5, Steps: 9 | Train Loss: 0.6889674 Vali Loss: nan Test Loss: 2.4772983
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 2.2440714836120605
+Epoch: 6, Steps: 9 | Train Loss: 0.6947604 Vali Loss: nan Test Loss: 2.4806788
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 2.091291904449463
+Epoch: 7, Steps: 9 | Train Loss: 0.6929193 Vali Loss: nan Test Loss: 2.4799864
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 2.2104880809783936
+Epoch: 8, Steps: 9 | Train Loss: 0.6893240 Vali Loss: nan Test Loss: 2.4761491
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 2.1247172355651855
+Epoch: 9, Steps: 9 | Train Loss: 0.6932658 Vali Loss: nan Test Loss: 2.4748890
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 2.043245553970337
+Epoch: 10, Steps: 9 | Train Loss: 0.6904771 Vali Loss: nan Test Loss: 2.4744098
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : long_term_forecast_36_60_MyformerV2_custom_ftM_sl36_ll18_pl60_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 134
+test shape: (134, 1, 60, 7) (134, 1, 60, 7)
+test shape: (134, 60, 7) (134, 60, 7)
+mse:2.474410057067871, mae:1.0168360471725464

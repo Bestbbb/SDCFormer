@@ -1,0 +1,92 @@
+Args in experiment:
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=128, c_out=21, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=21, factor=3, features='M', freq='h', gpu=0, head_dropout=0.0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='PatchTST', model_id='weather_96_96', moving_avg=25, multi_moving_avg=[13, 17, 21, 25, 29, 31], n_heads=4, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patch_len=16, patience=3, pred_len=96, root_path='./dataset/weather/', seasonal_patterns='Monthly', seq_len=96, show_model=False, stride=8, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_weather_96_96_PatchTST_custom_ftM_sl96_ll48_pl96_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36696
+val 5175
+test 10444
+	iters: 100, epoch: 1 | loss: 0.6380394
+	speed: 0.8339s/iter; left time: 2302.5169s
+	iters: 200, epoch: 1 | loss: 0.3788665
+	speed: 0.7962s/iter; left time: 2118.6749s
+Epoch: 1 cost time: 232.404855966568
+Epoch: 1, Steps: 286 | Train Loss: 0.5350135 Vali Loss: 0.4657350 Test Loss: 0.1922378
+Validation loss decreased (inf --> 0.465735).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4917272
+	speed: 5.6696s/iter; left time: 14032.3157s
+	iters: 200, epoch: 2 | loss: 0.4654193
+	speed: 0.7971s/iter; left time: 1893.1632s
+Epoch: 2 cost time: 229.14375495910645
+Epoch: 2, Steps: 286 | Train Loss: 0.5085418 Vali Loss: 0.4583579 Test Loss: 0.1875893
+Validation loss decreased (0.465735 --> 0.458358).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.6191328
+	speed: 5.8522s/iter; left time: 12810.3848s
+	iters: 200, epoch: 3 | loss: 0.3849913
+	speed: 0.7864s/iter; left time: 1642.7142s
+Epoch: 3 cost time: 227.61721754074097
+Epoch: 3, Steps: 286 | Train Loss: 0.4968522 Vali Loss: 0.4475550 Test Loss: 0.1849387
+Validation loss decreased (0.458358 --> 0.447555).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.4554348
+	speed: 5.6190s/iter; left time: 10692.9424s
+	iters: 200, epoch: 4 | loss: 0.6710307
+	speed: 0.7951s/iter; left time: 1433.5126s
+Epoch: 4 cost time: 228.84528064727783
+Epoch: 4, Steps: 286 | Train Loss: 0.4934223 Vali Loss: 0.4458085 Test Loss: 0.1841001
+Validation loss decreased (0.447555 --> 0.445808).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.6298937
+	speed: 5.7850s/iter; left time: 9354.3759s
+	iters: 200, epoch: 5 | loss: 0.8115570
+	speed: 0.7965s/iter; left time: 1208.3021s
+Epoch: 5 cost time: 228.90003037452698
+Epoch: 5, Steps: 286 | Train Loss: 0.4911743 Vali Loss: 0.4452503 Test Loss: 0.1836737
+Validation loss decreased (0.445808 --> 0.445250).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.3875654
+	speed: 5.8420s/iter; left time: 7775.7481s
+	iters: 200, epoch: 6 | loss: 0.3599577
+	speed: 0.7900s/iter; left time: 972.4322s
+Epoch: 6 cost time: 226.49793100357056
+Epoch: 6, Steps: 286 | Train Loss: 0.4887689 Vali Loss: 0.4458657 Test Loss: 0.1827755
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.4974796
+	speed: 5.8931s/iter; left time: 6158.2865s
+	iters: 200, epoch: 7 | loss: 0.4159013
+	speed: 0.7937s/iter; left time: 750.0274s
+Epoch: 7 cost time: 228.0064561367035
+Epoch: 7, Steps: 286 | Train Loss: 0.4887804 Vali Loss: 0.4433625 Test Loss: 0.1827162
+Validation loss decreased (0.445250 --> 0.443362).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.4233966
+	speed: 5.4233s/iter; left time: 4116.2731s
+	iters: 200, epoch: 8 | loss: 0.6213043
+	speed: 0.7942s/iter; left time: 523.3718s
+Epoch: 8 cost time: 228.50780081748962
+Epoch: 8, Steps: 286 | Train Loss: 0.4890049 Vali Loss: 0.4404446 Test Loss: 0.1821455
+Validation loss decreased (0.443362 --> 0.440445).  Saving model ...
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 1.1233157
+	speed: 5.3894s/iter; left time: 2549.1630s
+	iters: 200, epoch: 9 | loss: 0.6302867
+	speed: 0.7951s/iter; left time: 296.5834s
+Epoch: 9 cost time: 228.6246259212494
+Epoch: 9, Steps: 286 | Train Loss: 0.4886637 Vali Loss: 0.4437571 Test Loss: 0.1823473
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.3579958
+	speed: 5.3985s/iter; left time: 1009.5246s
+	iters: 200, epoch: 10 | loss: 0.6158094
+	speed: 0.7876s/iter; left time: 68.5173s
+Epoch: 10 cost time: 226.12400770187378
+Epoch: 10, Steps: 286 | Train Loss: 0.4881899 Vali Loss: 0.4439986 Test Loss: 0.1823519
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : long_term_forecast_weather_96_96_PatchTST_custom_ftM_sl96_ll48_pl96_dm512_nh4_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10444
+test shape: (10444, 1, 96, 21) (10444, 1, 96, 21)
+test shape: (10444, 96, 21) (10444, 96, 21)
+mse:0.1821453869342804, mae:0.22120842337608337
